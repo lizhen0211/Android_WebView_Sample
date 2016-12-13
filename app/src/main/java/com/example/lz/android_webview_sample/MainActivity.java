@@ -1,0 +1,25 @@
+package com.example.lz.android_webview_sample;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void onBasicUsageBtnClick(View view) {
+        Intent intent = new Intent(this, BasicUsageActivity.class);
+        startActivity(intent);
+    }
+
+    public void onWebviewClientBtnClick(View view) {
+        Intent intent = new Intent(this, WebViewClientActivity.class);
+        startActivity(intent);
+    }
+}

@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -19,6 +22,8 @@ public class WebViewClientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_webview_client);
         webView = (WebView) findViewById(R.id.webview);
         //webView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
+        WebSettings settings = webView.getSettings();
+        settings.setJavaScriptEnabled(true);
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
@@ -31,14 +36,40 @@ public class WebViewClientActivity extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
+
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                //用javascript隐藏系统定义的错误提示页面
+                String data = "Network Error!";
+                view.loadUrl("javascript:document.body.innerHTML=\"" + data + "\"");
+
+                //super.onReceivedError(view, request, error);
+            }
         });
     }
 
     public void loadURL(View view) {
-        webView.loadUrl("http://m.baidu.com");
+        webView.loadUrl("https://m.baidu.com");
         //webView.loadUrl("http://m.yahoo.com");
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        webView.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        webView.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        webView.destroy();
+    }
 
     /**
      * Navigating web page history

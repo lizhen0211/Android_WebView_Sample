@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".BasicUsageActivity" />
-        <activity android:name=".WebViewClientActivity"></activity>
+        <activity android:name=".WebViewClientActivity" />
+        <activity android:name=".BasicWebviewActivity"/>
     </application>
 
 </manifest>

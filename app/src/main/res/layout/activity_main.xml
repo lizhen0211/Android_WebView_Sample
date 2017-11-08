@@ -12,9 +12,18 @@
     tools:context="com.example.lz.android_webview_sample.MainActivity">
 
     <Button
+        android:id="@+id/basicWebviewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onBasicWebviewBtnClick"
+        android:text="basicWebview" />
+
+    <Button
         android:id="@+id/basicUsageBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:onClick="onBasicUsageBtnClick"
         android:text="basicUsage" />
 
@@ -22,7 +31,7 @@
         android:id="@+id/actWithJsBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:onClick="onWebviewClientBtnClick"
         android:text="webviewClient" />
 </LinearLayout>

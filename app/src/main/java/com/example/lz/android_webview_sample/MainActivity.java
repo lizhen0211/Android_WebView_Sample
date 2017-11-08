@@ -13,6 +13,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void onBasicWebviewBtnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, BasicWebviewActivity.class);
+        startActivity(intent);
+    }
+
     public void onBasicUsageBtnClick(View view) {
         Intent intent = new Intent(this, BasicUsageActivity.class);
         startActivity(intent);

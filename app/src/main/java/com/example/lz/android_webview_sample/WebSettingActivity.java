@@ -23,7 +23,7 @@ public class WebSettingActivity extends Activity {
         webView.loadUrl("https://m.baidu.com");
     }
 
-    private void configSetting(){
+    private void configSetting() {
         WebSettings webSettings = webView.getSettings();
 
         //如果访问的页面中要与Javascript交互，则webview必须设置支持Javascript
@@ -42,6 +42,20 @@ public class WebSettingActivity extends Activity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true); //支持通过JS打开新窗口
         webSettings.setLoadsImagesAutomatically(true); //支持自动加载图片
         webSettings.setDefaultTextEncodingName("utf-8");//设置编码格式
+
+       /* if (NetStatusUtil.isConnected(getApplicationContext())) {
+            webSettings.setCacheMode(WebSettings.LOAD_DEFAULT);//根据cache-control决定是否从网络上取数据。
+        } else {
+            webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);//没网，则从本地获取，即离线加载
+        }*/
+
+        webSettings.setDomStorageEnabled(true); // 开启 DOM storage API 功能
+        webSettings.setDatabaseEnabled(true);   //开启 database storage API 功能
+        webSettings.setAppCacheEnabled(true);//开启 Application Caches 功能
+        String APP_CACAHE_DIRNAME = "app_cache";
+        String cacheDirPath = getFilesDir().getAbsolutePath() + "/" + APP_CACAHE_DIRNAME;
+        webSettings.setAppCachePath(cacheDirPath); //设置  Application Caches 缓存目录
+        //注意： 每个 Application 只调用一次 WebSettings.setAppCachePath()，WebSettings.setAppCacheMaxSize()
     }
 
     @Override

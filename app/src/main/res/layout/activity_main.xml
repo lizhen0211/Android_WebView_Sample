@@ -20,6 +20,14 @@
         android:text="basicWebview" />
 
     <Button
+        android:id="@+id/webview_setting_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onWebviewSettingBtnClick"
+        android:text="webviewSetting" />
+
+    <Button
         android:id="@+id/basicUsageBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -19,6 +19,7 @@
         <activity android:name=".BasicUsageActivity" />
         <activity android:name=".WebViewClientActivity" />
         <activity android:name=".BasicWebviewActivity"/>
+        <activity android:name=".WebSettingActivity"/>
     </application>
 
 </manifest>

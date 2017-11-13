@@ -33,7 +33,7 @@ public class WebViewClientActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webview_client);
         root = (LinearLayout) findViewById(R.id.activity_webview_client);
         configSetting();
-        setWebclientClient();
+        setWebClientClient();
         webView.loadUrl(url);
     }
 
@@ -60,7 +60,7 @@ public class WebViewClientActivity extends AppCompatActivity {
         }
     }
 
-    private void setWebclientClient() {
+    private void setWebClientClient() {
         webView.setWebViewClient(new WebViewClient() {
             /**
              *

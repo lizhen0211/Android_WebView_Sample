@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WebViewClientActivity.class);
         startActivity(intent);
     }
+
+    public void onWebChromeClientBtnClick(View view) {
+        Intent intent = new Intent(this, WebChromeClientActivity.class);
+        startActivity(intent);
+    }
 }

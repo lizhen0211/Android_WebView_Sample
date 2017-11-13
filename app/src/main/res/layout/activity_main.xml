@@ -28,15 +28,7 @@
         android:text="webviewSetting" />
 
     <Button
-        android:id="@+id/basicUsageBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:onClick="onBasicUsageBtnClick"
-        android:text="basicUsage" />
-
-    <Button
-        android:id="@+id/actWithJsBtn"
+        android:id="@+id/webviewClientBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

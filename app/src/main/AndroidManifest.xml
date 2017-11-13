@@ -3,6 +3,8 @@
     package="com.example.lz.android_webview_sample">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,8 +20,8 @@
         </activity>
         <activity android:name=".BasicUsageActivity" />
         <activity android:name=".WebViewClientActivity" />
-        <activity android:name=".BasicWebviewActivity"/>
-        <activity android:name=".WebSettingActivity"/>
+        <activity android:name=".BasicWebviewActivity" />
+        <activity android:name=".WebSettingActivity" />
     </application>
 
 </manifest>

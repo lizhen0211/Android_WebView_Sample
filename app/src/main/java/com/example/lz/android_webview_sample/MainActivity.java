@@ -23,11 +23,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onBasicUsageBtnClick(View view) {
-        Intent intent = new Intent(this, BasicUsageActivity.class);
-        startActivity(intent);
-    }
-
     public void onWebviewClientBtnClick(View view) {
         Intent intent = new Intent(this, WebViewClientActivity.class);
         startActivity(intent);

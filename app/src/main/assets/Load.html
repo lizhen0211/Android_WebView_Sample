@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <h1>选择器</h1>
+    <h2>元素选择器</h2>
+    <hr>
+    <h3>选择器分组</h3>
+    <span>内容</span>
+    <hr>
+    <h4>通配符选择器</h4>
+    <hr>
+    <h5>声明分组</h5>
+    <hr>
+    <h6>结合选择器和生命分组</h6>
+    <h7>结合选择器和生命分组</h7>
+    <hr>
+    <p class="warning">类选择器段落</p>
+    <p>类选择器<span class="warning">类选择器文本</span></p>
+
+    <p class="warning1">类选择器段落1</p>
+    <p>类选择器<span class="warning1">类选择器文本1</span></p>
+    <hr>
+</head>
+<body>
+
+</body>
+<style>
+  /*元素选择器 ---- start*/
+  /*文档的元素是最基本的选择器*/
+  html {
+    color: red
+  }
+
+  p {
+    color: gray
+  }
+
+  h2 {
+    color: silver
+  }
+
+  /*元素选择器 ---- end*/
+
+  /*分组选择器 ---- start*/
+  /*使用“,”隔开，如果不适用“,” 含义完全不同*/
+  h3, span {
+    color: green;
+  }
+
+  /*分组选择器 ---- end*/
+
+  /*通配符选择器 ----start*/
+  /*相当于文档中所有元素的分组选择器*/
+  * {
+    /*color: yellow;*/
+  }
+
+  /*通配符选择器 ----end*/
+
+  /*声明分组 ----start*/
+  h5 {
+    font: 18px Helvetica;
+    color: purple;
+    background: aqua;
+  }
+
+  /*声明分组 ----end*/
+
+  /*结合选择器和声明分组 ----start*/
+  h6, h7 {
+    color: gray;
+    background: white;
+    border: 1px solid black
+  }
+
+  /*结合选择器和声明分组 ----end*/
+
+  /*类选择器 ----start*/
+
+  /*通用类选择器*/
+  *.warning {
+    font-weight: bold;
+    color: red;
+  }
+
+  /*元素特定类选择器*/
+  /*所有class="warning1"的<p>元素将被选中*/
+  p.warning1 {
+    font-weight: bold;
+    color: red;
+  }
+
+  span.warning1 {
+    font-style: italic;
+  }
+
+  /*通用类选择器和元素特定类选择器可以结合使用*/
+  /*  .warning{}
+    span.warning{}*/
+
+  /*类选择器 ----end*/
+</style>
+</html>

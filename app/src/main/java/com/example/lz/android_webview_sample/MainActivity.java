@@ -32,4 +32,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WebChromeClientActivity.class);
         startActivity(intent);
     }
+
+    public void onAndroidJsInteractBtnClick(View view) {
+        Intent intent = new Intent(this, AndroidJsInteractActivity.class);
+        startActivity(intent);
+    }
+
 }

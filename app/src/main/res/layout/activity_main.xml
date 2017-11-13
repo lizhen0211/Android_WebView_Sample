@@ -43,4 +43,13 @@
         android:onClick="onWebChromeClientBtnClick"
         android:text="webviewChromeClient" />
 
+    <Button
+        android:id="@+id/androidJsInteractBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onAndroidJsInteractBtnClick"
+        android:text="androidJsInteract" />
+
+
 </LinearLayout>

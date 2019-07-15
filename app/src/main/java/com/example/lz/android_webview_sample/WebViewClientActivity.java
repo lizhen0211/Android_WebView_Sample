@@ -54,6 +54,7 @@ public class WebViewClientActivity extends AppCompatActivity {
     private void configSetting() {
         WebSettings settings = webView.getSettings();
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
+        //打开此设置，shouldOverrideUrlLoading 方法将不会执行
         settings.setJavaScriptEnabled(true);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             settings.setAllowFileAccessFromFileURLs(true);
@@ -108,15 +109,19 @@ public class WebViewClientActivity extends AppCompatActivity {
 
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    Log.e(WebViewClientActivity.this.getClass().getSimpleName(), error.getErrorCode() + ":" + error.getDescription());
+                }
                 //用javascript隐藏系统定义的错误提示页面
-                String data = "Network Error!";
-                view.loadUrl("javascript:document.body.innerHTML=\"" + data + "\"");
+                view.loadUrl("file:///android_asset/error.html");
+                //view.loadUrl("https://www.yahoo.com");
 
-                //super.onReceivedError(view, request, error);
+//                super.onReceivedError(view, request, error);
             }
 
             @Override
             public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
+                //这个方法主要用于响应服务器返回的Http错误(状态码大于等于400)
                 super.onReceivedHttpError(view, request, errorResponse);
             }
         });

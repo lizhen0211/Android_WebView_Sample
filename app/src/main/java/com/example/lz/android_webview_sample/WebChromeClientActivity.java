@@ -24,7 +24,6 @@ public class WebChromeClientActivity extends Activity {
 
     private LinearLayout root;
     private String url = "https://m.baidu.com";
-    ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

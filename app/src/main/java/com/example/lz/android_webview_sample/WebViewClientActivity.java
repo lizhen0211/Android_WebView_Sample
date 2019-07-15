@@ -42,7 +42,7 @@ public class WebViewClientActivity extends AppCompatActivity {
     }
 
     public void onLoadAssets(View view) {
-        webView.loadUrl("file:///android_asset/1load.html");
+        webView.loadUrl("file:///android_asset/load.html");
     }
 
     public void onLoadSdcard(View view) {

@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.lz.android_webview_sample.advanced.AdvanceActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -35,6 +37,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onAndroidJsInteractBtnClick(View view) {
         Intent intent = new Intent(this, AndroidJsInteractActivity.class);
+        startActivity(intent);
+    }
+
+    public void onAdvancedClick(View view) {
+        Intent intent = new Intent(this, AdvanceActivity.class);
         startActivity(intent);
     }
 

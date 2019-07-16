@@ -51,5 +51,12 @@
         android:onClick="onAndroidJsInteractBtnClick"
         android:text="androidJsInteract" />
 
+    <Button
+        android:id="@+id/advancedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onAdvancedClick"
+        android:text="advanced" />
 
 </LinearLayout>

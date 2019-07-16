@@ -23,6 +23,7 @@
         <activity android:name=".WebSettingActivity" />
         <activity android:name=".WebChromeClientActivity" />
         <activity android:name=".AndroidJsInteractActivity" />
+        <activity android:name=".advanced.AdvanceActivity"/>
     </application>
 
 </manifest>

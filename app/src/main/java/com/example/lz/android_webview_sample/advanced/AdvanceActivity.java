@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.ValueCallback;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -23,7 +24,16 @@ public class AdvanceActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.webview);
         configSetting();
         webView.loadUrl("file:///android_asset/interaction.html");
-        webView.setWebViewClient(new WebViewClient() {});
+        webView.setWebViewClient(new WebViewClient() {
+        });
+
+        //设置WebChromeClient 才能alert
+        webView.setWebChromeClient(new WebChromeClient() {
+            /*@Override
+            public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
+                return super.onJsAlert(view, url, message, result);
+            }*/
+        });
     }
 
     private void configSetting() {

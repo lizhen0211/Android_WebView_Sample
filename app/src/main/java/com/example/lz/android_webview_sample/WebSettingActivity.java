@@ -1,6 +1,7 @@
 package com.example.lz.android_webview_sample;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
@@ -56,6 +57,12 @@ public class WebSettingActivity extends Activity {
         String cacheDirPath = getFilesDir().getAbsolutePath() + "/" + APP_CACAHE_DIRNAME;
         webSettings.setAppCachePath(cacheDirPath); //设置  Application Caches 缓存目录
         //注意： 每个 Application 只调用一次 WebSettings.setAppCachePath()，WebSettings.setAppCacheMaxSize()
+        if (android.os.Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+            webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            webSettings.setAllowFileAccessFromFileURLs(true);
+        }
     }
 
     @Override

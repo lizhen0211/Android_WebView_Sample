@@ -1,10 +1,13 @@
 package com.example.lz.android_webview_sample.advanced;
 
+import android.content.DialogInterface;
 import android.os.Build;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.JsResult;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
@@ -33,6 +36,22 @@ public class AdvanceActivity extends AppCompatActivity {
             public boolean onJsAlert(WebView view, String url, String message, JsResult result) {
                 return super.onJsAlert(view, url, message, result);
             }*/
+
+            @Override
+            public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
+                AlertDialog dialog = new AlertDialog.Builder(view.getContext()).
+                        setTitle("YourAlertTitle").
+                        setMessage(message).
+                        setPositiveButton("OK1", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                //do nothing
+                            }
+                        }).create();
+                dialog.show();
+                result.confirm();
+                return true;
+            }
         });
     }
 

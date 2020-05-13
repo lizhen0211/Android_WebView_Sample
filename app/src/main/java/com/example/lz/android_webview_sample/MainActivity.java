@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.lz.android_webview_sample.advanced.AdvanceActivity;
+import com.example.lz.android_webview_sample.advanced.JSCallAndroidByInjectActivity;
+import com.example.lz.android_webview_sample.advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,8 +37,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onAndroidJsInteractBtnClick(View view) {
-        Intent intent = new Intent(this, AndroidJsInteractActivity.class);
+    public void onJSCallAndroidByInject(View view) {
+        Intent intent = new Intent(this, JSCallAndroidByInjectActivity.class);
+        startActivity(intent);
+    }
+
+    public void onJSCallAndroidByUrlLoading(View view) {
+        Intent intent = new Intent(this, JSCallAndroidByshouldOverrideUrlLoadingActivity.class);
         startActivity(intent);
     }
 

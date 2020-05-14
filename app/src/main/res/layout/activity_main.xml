@@ -56,8 +56,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="js调用android 通过 拦截URL"
-        android:onClick="onJSCallAndroidByUrlLoading" />
+        android:onClick="onJSCallAndroidByUrlLoading"
+        android:text="js调用android 通过 拦截URL" />
+
+    <Button
+        android:id="@+id/jsCallAndroidBtn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onJSCallAndroidByJsDialog"
+        android:text="js调用android 通过 拦截JS对话框" />
 
     <Button
         android:id="@+id/advancedBtn"

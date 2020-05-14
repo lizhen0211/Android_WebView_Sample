@@ -29,9 +29,9 @@ public class JSCallAndroidByInjectActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_java_call_android1);
+        setContentView(R.layout.activity_js_call_android1);
         webView = (WebView) findViewById(R.id.webview_interact);
-        root = (LinearLayout) findViewById(R.id.activity_android_js_interact);
+        root = (LinearLayout) findViewById(R.id.activity_android_js_interact1);
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
     }

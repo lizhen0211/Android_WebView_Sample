@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.example.lz.android_webview_sample.advanced.AdvanceActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByInjectActivity;
+import com.example.lz.android_webview_sample.advanced.JSCallAndroidByJsDialogActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onJSCallAndroidByUrlLoading(View view) {
         Intent intent = new Intent(this, JSCallAndroidByshouldOverrideUrlLoadingActivity.class);
+        startActivity(intent);
+    }
+
+    public void onJSCallAndroidByJsDialog(View view) {
+        Intent intent = new Intent(this, JSCallAndroidByJsDialogActivity.class);
         startActivity(intent);
     }
 

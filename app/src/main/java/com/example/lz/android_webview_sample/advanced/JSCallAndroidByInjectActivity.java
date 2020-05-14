@@ -49,7 +49,7 @@ public class JSCallAndroidByInjectActivity extends Activity {
                 "        Android.showToast(toast);\n" +
                 "    }\n" +
                 "</script>", "text/html", null);*/
-        webView.loadUrl("file:///android_asset/js_call_android.html");
+        webView.loadUrl("file:///android_asset/js_call_android_by_inject.html");
         //Injects the supplied Java object into this WebView
         webView.addJavascriptInterface(new WebAppInterface(this), "Android");
     }

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".advanced.AdvanceActivity">
+    tools:context=".advanced.AndroidCallJsActivity">
 
     <Button
         android:id="@+id/android_call_js_1"

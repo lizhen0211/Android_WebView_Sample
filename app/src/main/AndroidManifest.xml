@@ -23,7 +23,7 @@
         <activity android:name=".WebSettingActivity" />
         <activity android:name=".WebChromeClientActivity" />
         <activity android:name=".advanced.JSCallAndroidByInjectActivity" />
-        <activity android:name=".advanced.AdvanceActivity" />
+        <activity android:name=".advanced.AndroidCallJsActivity" />
         <activity android:name=".advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity" />
         <activity android:name=".advanced.JSCallAndroidByJsDialogActivity"/>
     </application>

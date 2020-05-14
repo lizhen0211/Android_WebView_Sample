@@ -16,17 +16,17 @@ import android.webkit.WebViewClient;
 
 import com.example.lz.android_webview_sample.R;
 
-public class AdvanceActivity extends AppCompatActivity {
+public class AndroidCallJsActivity extends AppCompatActivity {
 
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advance);
+        setContentView(R.layout.activity_android_call_js);
         webView = (WebView) findViewById(R.id.webview);
         configSetting();
-        webView.loadUrl("file:///android_asset/interaction.html");
+        webView.loadUrl("file:///android_asset/android_call_js.html");
         webView.setWebViewClient(new WebViewClient() {
         });
 
@@ -65,7 +65,7 @@ public class AdvanceActivity extends AppCompatActivity {
             webView.evaluateJavascript("onAndroidCallJsByEvaluate()", new ValueCallback<String>() {
                 @Override
                 public void onReceiveValue(String s) {
-                    Log.e(AdvanceActivity.class.getSimpleName(), s);
+                    Log.e(AndroidCallJsActivity.class.getSimpleName(), s);
                 }
             });
         }

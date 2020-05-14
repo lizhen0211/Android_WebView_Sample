@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.lz.android_webview_sample.advanced.AdvanceActivity;
+import com.example.lz.android_webview_sample.advanced.AndroidCallJsActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByInjectActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByJsDialogActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onAdvancedClick(View view) {
-        Intent intent = new Intent(this, AdvanceActivity.class);
+        Intent intent = new Intent(this, AndroidCallJsActivity.class);
         startActivity(intent);
     }
 

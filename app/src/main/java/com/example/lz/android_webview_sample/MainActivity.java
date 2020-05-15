@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onAdvancedClick(View view) {
+    public void onAndroidCallJsClick(View view) {
         Intent intent = new Intent(this, AndroidCallJsActivity.class);
         startActivity(intent);
     }

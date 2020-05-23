@@ -68,11 +68,19 @@
         android:text="js调用android 通过 拦截JS对话框" />
 
     <Button
-        android:id="@+id/advancedBtn"
+        android:id="@+id/androidCallJsBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:onClick="onAndroidCallJsClick"
-        android:text="advanced" />
+        android:text="androidCallJs" />
+
+    <Button
+        android:id="@+id/simpleJsBridgeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="onSimpleJsBridgeClick"
+        android:text="simpleJsBridge" />
 
 </LinearLayout>

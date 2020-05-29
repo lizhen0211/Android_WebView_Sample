@@ -9,6 +9,7 @@ import com.example.lz.android_webview_sample.advanced.AndroidCallJsActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByInjectActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByJsDialogActivity;
 import com.example.lz.android_webview_sample.advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity;
+import com.example.lz.android_webview_sample.otherjsbridge.OtherJsBridgeActivity;
 import com.example.lz.android_webview_sample.simplejsbridge.SimpleJsBridgeActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,8 +60,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onSimpleJsBridgeClick(View view){
+    public void onSimpleJsBridgeClick(View view) {
         Intent intent = new Intent(this, SimpleJsBridgeActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 三方JsBridge
+     *
+     * @param view
+     */
+    public void onOtherJsBridgeClick(View view) {
+        Intent intent = new Intent(this, OtherJsBridgeActivity.class);
         startActivity(intent);
     }
 

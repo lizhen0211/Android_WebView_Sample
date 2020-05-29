@@ -26,7 +26,8 @@
         <activity android:name=".advanced.AndroidCallJsActivity" />
         <activity android:name=".advanced.JSCallAndroidByshouldOverrideUrlLoadingActivity" />
         <activity android:name=".advanced.JSCallAndroidByJsDialogActivity" />
-        <activity android:name=".simplejsbridge.SimpleJsBridgeActivity"/>
+        <activity android:name=".simplejsbridge.SimpleJsBridgeActivity" />
+        <activity android:name=".otherjsbridge.OtherJsBridgeActivity" />
     </application>
 
 </manifest>

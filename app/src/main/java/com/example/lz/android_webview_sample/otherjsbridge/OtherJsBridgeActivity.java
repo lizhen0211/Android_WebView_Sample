@@ -21,25 +21,38 @@ public class OtherJsBridgeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_other_js_bridge);
         webView = (BridgeWebView) findViewById(R.id.webView);
-        webView.loadUrl("http://192.168.6.49:8081/otherJsBridge");
+        webView.loadUrl("http://192.168.6.49:8080/otherJsBridge");
 
         webView.setDefaultHandler(new DefaultHandler());
 
+        /**
+         * 注册js 调用native，navite的回调函数
+         */
         webView.registerHandler("submitFromWeb", new BridgeHandler() {
 
             @Override
             public void handler(String data, CallBackFunction function) {
-                Log.i("chrom-java", "handler = submitFromWeb, data from web = " + data);
+                Log.e("chrom-java", "handler = submitFromWeb, data from web = " + data);
+                //此处再次调用js 注册的submitFromWeb 方法
                 function.onCallBack("submitFromWeb exe, response data 中文 from Java");
-                Log.e("chrom-java","webView.registerHandler onCallBack");
             }
         });
     }
 
+    /**
+     * native 调用js 无回调
+     *
+     * @param view
+     */
     public void callJsWithoutCallback(View view) {
         webView.send("hello");
     }
 
+    /**
+     * native 调用js 有回到
+     *
+     * @param view
+     */
     public void callJsWithcallback(View view) {
         webView.callHandler("functionInJs", getJson(), new CallBackFunction() {
             @Override

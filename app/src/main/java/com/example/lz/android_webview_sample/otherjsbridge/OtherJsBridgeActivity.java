@@ -23,10 +23,11 @@ public class OtherJsBridgeActivity extends Activity {
         webView = (BridgeWebView) findViewById(R.id.webView);
         webView.loadUrl("http://192.168.6.49:8080/otherJsBridge");
 
+        //js 调用 Android 默认走Default Handler
         webView.setDefaultHandler(new DefaultHandler());
 
         /**
-         * 注册js 调用native，navite的回调函数
+         * js 调用 Android，如果注册了Handler，则不走默认的DefaultHandler
          */
         webView.registerHandler("submitFromWeb", new BridgeHandler() {
 
